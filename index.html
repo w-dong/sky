@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/jquery-3.1.1.min.js"></script>
+	</head>
+	<body>
+		<div class="main">
+			<p class="m_one">快速搜索消费贷款</p>
+			<div class="m_two">
+				<p>货款金额:</p>
+				<p>不足一万可用小数表示</p>
+			</div>
+			<div class="m_three">
+				<P class="num"></P>
+				<p class="dingwei"></p>
+				<div class="imgg">
+					<a href="#">丅</a>
+					<div class="bolck">
+						<p class="pp"><span>10</span><i>万元</i></p>
+						<p class="pp"><span>20</span><i>万元</i></p>
+						<p class="pp"><span>30</span><i>万元</i></p>
+						<p class="pp"><span>40</span><i>万元</i></p>
+						<p class="pp"><span>50</span><i>万元</i></p>
+						<p class="pp"><span>60</span><i>万元</i></p>
+					</div>
+				</div>
+			</div>
+			<div class="m_three1">
+				<P class="num1"></P>
+				<p class="dingwei1"></p>
+				<div class="imgg1">
+					<a href="#">丅</a>
+					<div class="bolck1">
+						<p class="pp1"><span>1</span><i>月</i></p>
+						<p class="pp1"><span>2</span><i>年</i></p>
+						<p class="pp1"><span>3</span><i>月</i></p>
+						<p class="pp1"><span>4</span><i>年</i></p>
+						<p class="pp1"><span>5</span><i>月</i></p>
+						<p class="pp1"><span>6</span><i>年</i></p>
+					</div>
+				</div>
+			</div>
+			<div class="m_four">
+				搜索一下
+			</div>
+			<p class="m_five">
+				9164种信贷产品 2000家银行 1403家小贷公司
+			</p>
+		</div>
+	</body>
+    <script>
+		$(".imgg").click(function(){
+			$(".bolck").stop().slideToggle();
+		})
+		$(".pp").click(function(){
+			var oTxt=$(this).find("span").first().html();
+			$(".num").html(oTxt);
+			var oTxt1=$(this).find("i").last().html();
+			alert(oTxt1)
+			$(".dingwei").html(oTxt1);
+		})
+
+		$(".imgg1").click(function(){
+			$(".bolck1").stop().slideToggle();
+		})
+		$(".pp1").click(function(){
+			var oTxt_l=$(this).find("span").first().html();
+			$(".num1").html(oTxt_l);
+			var oTxt1_r=$(this).find("i").last().html();
+			alert(oTxt1_r)
+			$(".dingwei1").html(oTxt1_r);
+		})
+	</script>
+</html>
